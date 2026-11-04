@@ -1,0 +1,101 @@
+Customer_ID,Actual_Churn,Predicted_Churn,Churn_Probability,Risk_Level,Recommended_Offer
+1,Yes,No,49.2%,Medium,10% monthly bill discount for 2 months | Offer a suitable plan review | Special discount for switching to a 1-year contract | Review plan for a lower-cost package
+2,Yes,Yes,75.7%,High,15% monthly bill discount for 3 months | Personal retention call within 24 hours | Special discount for switching to a 1-year contract | One month of free technical support | Review plan for a lower-cost package
+3,No,No,3.1%,Low,5% loyalty discount on next bill | Send a loyalty appreciation message
+4,Yes,No,47.3%,Medium,10% monthly bill discount for 2 months | Offer a suitable plan review | Special discount for switching to a 1-year contract | One month of free technical support | One month of free online security | Review plan for a lower-cost package
+5,Yes,Yes,80.9%,High,15% monthly bill discount for 3 months | Personal retention call within 24 hours | Special discount for switching to a 1-year contract | One month of free technical support | One month of free online security | Review plan for a lower-cost package
+6,No,No,44.8%,Medium,10% monthly bill discount for 2 months | Offer a suitable plan review | Special discount for switching to a 1-year contract | One month of free technical support | One month of free online security
+7,No,Yes,72.5%,High,15% monthly bill discount for 3 months | Personal retention call within 24 hours | One month of free technical support | One month of free online security | Review plan for a lower-cost package
+8,No,No,30.5%,Medium,10% monthly bill discount for 2 months | Offer a suitable plan review | Special discount for switching to a 1-year contract
+9,No,No,4.2%,Low,5% loyalty discount on next bill | Send a loyalty appreciation message
+10,No,No,6.9%,Low,5% loyalty discount on next bill | Send a loyalty appreciation message | Review plan for a lower-cost package
+11,No,No,4.5%,Low,5% loyalty discount on next bill | Send a loyalty appreciation message
+12,Yes,No,14.1%,Low,5% loyalty discount on next bill | Send a loyalty appreciation message | Special discount for switching to a 1-year contract | One month of free technical support | One month of free online security
+13,Yes,Yes,80.5%,High,15% monthly bill discount for 3 months | Personal retention call within 24 hours | Special discount for switching to a 1-year contract | One month of free technical support | One month of free online security | Review plan for a lower-cost package
+14,No,Yes,53.2%,Medium,10% monthly bill discount for 2 months | Offer a suitable plan review | Special discount for switching to a 1-year contract | Review plan for a lower-cost package
+15,No,Yes,78.4%,High,15% monthly bill discount for 3 months | Personal retention call within 24 hours | Special discount for switching to a 1-year contract | One month of free technical support | Review plan for a lower-cost package
+16,No,Yes,52.0%,Medium,10% monthly bill discount for 2 months | Offer a suitable plan review | Special discount for switching to a 1-year contract | One month of free technical support | One month of free online security | Review plan for a lower-cost package
+17,Yes,Yes,76.4%,High,15% monthly bill discount for 3 months | Personal retention call within 24 hours | Special discount for switching to a 1-year contract | One month of free technical support | One month of free online security | Review plan for a lower-cost package
+18,No,No,43.6%,Medium,10% monthly bill discount for 2 months | Offer a suitable plan review | Review plan for a lower-cost package
+19,No,No,3.7%,Low,5% loyalty discount on next bill | Send a loyalty appreciation message | Review plan for a lower-cost package
+20,No,No,12.8%,Low,5% loyalty discount on next bill | Send a loyalty appreciation message | Special discount for switching to a 1-year contract | One month of free online security
+21,No,No,16.2%,Low,5% loyalty discount on next bill | Send a loyalty appreciation message | Special discount for switching to a 1-year contract
+22,Yes,No,0.5%,Low,5% loyalty discount on next bill | Send a loyalty appreciation message | Review plan for a lower-cost package
+23,No,No,6.6%,Low,5% loyalty discount on next bill | Send a loyalty appreciation message | One month of free technical support
+24,Yes,No,38.9%,Medium,10% monthly bill discount for 2 months | Offer a suitable plan review | Special discount for switching to a 1-year contract | One month of free technical support | One month of free online security | Review plan for a lower-cost package
+25,No,Yes,74.0%,High,15% monthly bill discount for 3 months | Personal retention call within 24 hours | Special discount for switching to a 1-year contract | One month of free technical support | One month of free online security | Review plan for a lower-cost package
+26,No,No,6.3%,Low,5% loyalty discount on next bill | Send a loyalty appreciation message
+27,Yes,Yes,81.8%,High,15% monthly bill discount for 3 months | Personal retention call within 24 hours | Special discount for switching to a 1-year contract | One month of free technical support | One month of free online security | Review plan for a lower-cost package
+28,No,Yes,93.4%,High,15% monthly bill discount for 3 months | Personal retention call within 24 hours | Special discount for switching to a 1-year contract | One month of free technical support | One month of free online security | Review plan for a lower-cost package
+29,No,No,5.8%,Low,5% loyalty discount on next bill | Send a loyalty appreciation message | One month of free technical support | Review plan for a lower-cost package
+30,No,Yes,60.0%,High,15% monthly bill discount for 3 months | Personal retention call within 24 hours | Special discount for switching to a 1-year contract | Review plan for a lower-cost package
+31,No,Yes,51.0%,Medium,10% monthly bill discount for 2 months | Offer a suitable plan review | Special discount for switching to a 1-year contract | One month of free technical support | One month of free online security
+32,Yes,Yes,91.5%,High,15% monthly bill discount for 3 months | Personal retention call within 24 hours | Special discount for switching to a 1-year contract | One month of free technical support | One month of free online security | Review plan for a lower-cost package
+33,No,No,42.6%,Medium,10% monthly bill discount for 2 months | Offer a suitable plan review | Special discount for switching to a 1-year contract | One month of free online security
+34,No,No,0.6%,Low,5% loyalty discount on next bill | Send a loyalty appreciation message
+35,No,Yes,96.5%,High,15% monthly bill discount for 3 months | Personal retention call within 24 hours | Special discount for switching to a 1-year contract | One month of free technical support | One month of free online security | Review plan for a lower-cost package
+36,No,No,24.6%,Low,5% loyalty discount on next bill | Send a loyalty appreciation message | Special discount for switching to a 1-year contract | One month of free technical support | One month of free online security
+37,Yes,Yes,72.8%,High,15% monthly bill discount for 3 months | Personal retention call within 24 hours | Special discount for switching to a 1-year contract | One month of free technical support | One month of free online security | Review plan for a lower-cost package
+38,Yes,Yes,73.3%,High,15% monthly bill discount for 3 months | Personal retention call within 24 hours | Special discount for switching to a 1-year contract | One month of free technical support | One month of free online security | Review plan for a lower-cost package
+39,No,No,3.1%,Low,5% loyalty discount on next bill | Send a loyalty appreciation message
+40,No,No,4.0%,Low,5% loyalty discount on next bill | Send a loyalty appreciation message
+41,No,No,19.9%,Low,5% loyalty discount on next bill | Send a loyalty appreciation message | Review plan for a lower-cost package
+42,No,Yes,82.4%,High,15% monthly bill discount for 3 months | Personal retention call within 24 hours | Special discount for switching to a 1-year contract | One month of free online security | Review plan for a lower-cost package
+43,No,No,6.0%,Low,5% loyalty discount on next bill | Send a loyalty appreciation message
+44,No,No,19.4%,Low,5% loyalty discount on next bill | Send a loyalty appreciation message | One month of free online security | Review plan for a lower-cost package
+45,Yes,Yes,94.1%,High,15% monthly bill discount for 3 months | Personal retention call within 24 hours | Special discount for switching to a 1-year contract | One month of free technical support | One month of free online security | Review plan for a lower-cost package
+46,No,No,19.6%,Low,5% loyalty discount on next bill | Send a loyalty appreciation message | Special discount for switching to a 1-year contract
+47,No,No,30.9%,Medium,10% monthly bill discount for 2 months | Offer a suitable plan review | Special discount for switching to a 1-year contract
+48,No,No,49.2%,Medium,10% monthly bill discount for 2 months | Offer a suitable plan review | One month of free technical support | One month of free online security | Review plan for a lower-cost package
+49,No,No,43.9%,Medium,10% monthly bill discount for 2 months | Offer a suitable plan review | Special discount for switching to a 1-year contract | One month of free technical support | One month of free online security
+50,No,No,7.1%,Low,5% loyalty discount on next bill | Send a loyalty appreciation message
+51,No,No,0.8%,Low,5% loyalty discount on next bill | Send a loyalty appreciation message
+52,No,No,8.0%,Low,5% loyalty discount on next bill | Send a loyalty appreciation message
+53,No,No,15.2%,Low,5% loyalty discount on next bill | Send a loyalty appreciation message | Review plan for a lower-cost package
+54,Yes,Yes,94.8%,High,15% monthly bill discount for 3 months | Personal retention call within 24 hours | Special discount for switching to a 1-year contract | One month of free technical support | One month of free online security | Review plan for a lower-cost package
+55,No,No,5.0%,Low,5% loyalty discount on next bill | Send a loyalty appreciation message | Special discount for switching to a 1-year contract
+56,No,No,2.8%,Low,5% loyalty discount on next bill | Send a loyalty appreciation message | One month of free technical support | One month of free online security
+57,No,No,17.5%,Low,5% loyalty discount on next bill | Send a loyalty appreciation message | Special discount for switching to a 1-year contract | One month of free technical support
+58,Yes,Yes,68.8%,High,15% monthly bill discount for 3 months | Personal retention call within 24 hours | Special discount for switching to a 1-year contract | One month of free online security | Review plan for a lower-cost package
+59,No,No,24.6%,Low,5% loyalty discount on next bill | Send a loyalty appreciation message | Special discount for switching to a 1-year contract | One month of free technical support | One month of free online security
+60,Yes,Yes,75.6%,High,15% monthly bill discount for 3 months | Personal retention call within 24 hours | Special discount for switching to a 1-year contract | One month of free technical support | One month of free online security | Review plan for a lower-cost package
+61,No,No,11.4%,Low,5% loyalty discount on next bill | Send a loyalty appreciation message | Review plan for a lower-cost package
+62,No,No,4.1%,Low,5% loyalty discount on next bill | Send a loyalty appreciation message | One month of free technical support | Review plan for a lower-cost package
+63,No,No,43.3%,Medium,10% monthly bill discount for 2 months | Offer a suitable plan review | One month of free technical support | Review plan for a lower-cost package
+64,Yes,Yes,91.3%,High,15% monthly bill discount for 3 months | Personal retention call within 24 hours | Special discount for switching to a 1-year contract | One month of free technical support | One month of free online security | Review plan for a lower-cost package
+65,No,No,21.1%,Low,5% loyalty discount on next bill | Send a loyalty appreciation message
+66,No,No,0.7%,Low,5% loyalty discount on next bill | Send a loyalty appreciation message | One month of free technical support | One month of free online security
+67,No,Yes,84.5%,High,15% monthly bill discount for 3 months | Personal retention call within 24 hours | Special discount for switching to a 1-year contract | One month of free technical support | One month of free online security | Review plan for a lower-cost package
+68,No,No,5.3%,Low,5% loyalty discount on next bill | Send a loyalty appreciation message
+69,Yes,No,49.9%,Medium,10% monthly bill discount for 2 months | Offer a suitable plan review | Special discount for switching to a 1-year contract | One month of free technical support | One month of free online security
+70,Yes,Yes,87.5%,High,15% monthly bill discount for 3 months | Personal retention call within 24 hours | Special discount for switching to a 1-year contract | One month of free technical support | One month of free online security | Review plan for a lower-cost package
+71,No,No,16.6%,Low,5% loyalty discount on next bill | Send a loyalty appreciation message | Special discount for switching to a 1-year contract
+72,No,No,2.6%,Low,5% loyalty discount on next bill | Send a loyalty appreciation message
+73,No,No,15.8%,Low,5% loyalty discount on next bill | Send a loyalty appreciation message | Special discount for switching to a 1-year contract
+74,Yes,No,4.7%,Low,5% loyalty discount on next bill | Send a loyalty appreciation message | Special discount for switching to a 1-year contract
+75,No,Yes,86.7%,High,15% monthly bill discount for 3 months | Personal retention call within 24 hours | Special discount for switching to a 1-year contract | One month of free technical support | One month of free online security | Review plan for a lower-cost package
+76,No,No,5.0%,Low,5% loyalty discount on next bill | Send a loyalty appreciation message
+77,No,No,10.4%,Low,5% loyalty discount on next bill | Send a loyalty appreciation message
+78,No,No,43.8%,Medium,10% monthly bill discount for 2 months | Offer a suitable plan review | Special discount for switching to a 1-year contract | One month of free technical support | One month of free online security
+79,Yes,Yes,93.9%,High,15% monthly bill discount for 3 months | Personal retention call within 24 hours | Special discount for switching to a 1-year contract | One month of free technical support | One month of free online security
+80,No,Yes,83.5%,High,15% monthly bill discount for 3 months | Personal retention call within 24 hours | Special discount for switching to a 1-year contract | One month of free technical support | One month of free online security | Review plan for a lower-cost package
+81,No,No,21.8%,Low,5% loyalty discount on next bill | Send a loyalty appreciation message | Special discount for switching to a 1-year contract | One month of free technical support
+82,Yes,Yes,78.0%,High,15% monthly bill discount for 3 months | Personal retention call within 24 hours | Special discount for switching to a 1-year contract | One month of free technical support | One month of free online security | Review plan for a lower-cost package
+83,Yes,Yes,86.3%,High,15% monthly bill discount for 3 months | Personal retention call within 24 hours | Special discount for switching to a 1-year contract | One month of free technical support | Review plan for a lower-cost package
+84,No,No,32.8%,Medium,10% monthly bill discount for 2 months | Offer a suitable plan review | Special discount for switching to a 1-year contract
+85,No,No,24.1%,Low,5% loyalty discount on next bill | Send a loyalty appreciation message | Special discount for switching to a 1-year contract | One month of free technical support | One month of free online security
+86,No,No,0.7%,Low,5% loyalty discount on next bill | Send a loyalty appreciation message | One month of free technical support
+87,No,No,19.4%,Low,5% loyalty discount on next bill | Send a loyalty appreciation message | Special discount for switching to a 1-year contract | One month of free technical support | Review plan for a lower-cost package
+88,No,No,0.6%,Low,5% loyalty discount on next bill | Send a loyalty appreciation message
+89,No,No,1.9%,Low,5% loyalty discount on next bill | Send a loyalty appreciation message
+90,No,Yes,77.3%,High,15% monthly bill discount for 3 months | Personal retention call within 24 hours | Special discount for switching to a 1-year contract | One month of free technical support | One month of free online security | Review plan for a lower-cost package
+91,Yes,No,47.6%,Medium,10% monthly bill discount for 2 months | Offer a suitable plan review | One month of free technical support | One month of free online security | Review plan for a lower-cost package
+92,Yes,Yes,68.1%,High,15% monthly bill discount for 3 months | Personal retention call within 24 hours | Special discount for switching to a 1-year contract | One month of free technical support | Review plan for a lower-cost package
+93,No,Yes,93.6%,High,15% monthly bill discount for 3 months | Personal retention call within 24 hours | Special discount for switching to a 1-year contract | One month of free technical support | One month of free online security | Review plan for a lower-cost package
+94,No,No,9.6%,Low,5% loyalty discount on next bill | Send a loyalty appreciation message | Special discount for switching to a 1-year contract | One month of free online security
+95,Yes,No,44.4%,Medium,10% monthly bill discount for 2 months | Offer a suitable plan review | Special discount for switching to a 1-year contract | One month of free technical support | One month of free online security | Review plan for a lower-cost package
+96,No,No,10.9%,Low,5% loyalty discount on next bill | Send a loyalty appreciation message | Special discount for switching to a 1-year contract
+97,No,No,24.2%,Low,5% loyalty discount on next bill | Send a loyalty appreciation message
+98,No,Yes,79.3%,High,15% monthly bill discount for 3 months | Personal retention call within 24 hours | Special discount for switching to a 1-year contract | One month of free technical support | One month of free online security | Review plan for a lower-cost package
+99,No,No,18.8%,Low,5% loyalty discount on next bill | Send a loyalty appreciation message | Special discount for switching to a 1-year contract | One month of free technical support | One month of free online security
+100,No,Yes,58.9%,Medium,10% monthly bill discount for 2 months | Offer a suitable plan review | Special discount for switching to a 1-year contract | One month of free technical support | One month of free online security
