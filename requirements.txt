@@ -1,6 +1,14 @@
-pandas
-numpy
-scikit-learn
-jupyter
-matplotlib
-streamlit
+# ── Core Dependencies ──────────────────────────────
+pandas>=1.5.0
+numpy>=1.23.0
+scikit-learn>=1.2.0
+
+# ── Visualization ─────────────────────────────────
+matplotlib>=3.6.0
+seaborn>=0.12.0
+
+# ── Dashboard ─────────────────────────────────────
+streamlit>=1.28.0
+
+# ── Notebook Environment ──────────────────────────
+jupyter>=1.0.0
