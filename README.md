@@ -1,234 +1,222 @@
 <div align="center">
 
 # 📊 Customer Retention Intelligence
+### Machine-Learning-Based Churn Prediction, Risk Segmentation & Retention Recommendation
 
-**Predict churn. Quantify risk. Retain customers.**
-
-An end-to-end Machine Learning system that predicts customer churn probability, classifies risk levels, and generates personalized retention strategies — complete with an interactive Streamlit dashboard.
+An end-to-end Machine Learning system that predicts customer churn probability, classifies risk levels, and generates personalized retention strategies — accompanied by formal research, empirical evaluation, and an interactive Streamlit dashboard.
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-3776AB?logo=python&logoColor=white)](https://python.org)
 [![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io)
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-ML%20Pipeline-F7931E?logo=scikitlearn&logoColor=white)](https://scikit-learn.org)
+[![Paper](https://img.shields.io/badge/Research%20Paper-Read%20Paper-blue?logo=read-the-docs&logoColor=white)](paper/README.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 <br/>
 
-<img src="https://img.shields.io/badge/Status-Active-brightgreen" alt="status"/>
-<img src="https://img.shields.io/badge/Type-Mini%20Project-blue" alt="type"/>
+[📖 **Read Research Paper**](paper/README.md) • [📄 **Download Word Doc**](paper/ML_Research_Paper_5CSE03.docx) • [🚀 **Launch App**](#launch-the-streamlit-dashboard) • [📓 **View Notebook**](Customer_Retention_Intelligence.ipynb)
 
 </div>
+
+---
+
+## 👥 Authors & Research Team
+
+Department of Computer Science and Engineering:
+
+| Author | Student ID | Role / Specialization |
+| :--- | :--- | :--- |
+| **Rahul V** | `20241CSE1033` | Core Pipeline, Modeling & Dashboard |
+| **Vivek GujaGonda** | `20241CSE1034` | Data Preprocessing & Validation |
+| **Sudeep S Biradar** | `20241CSE1093` | Cross-Validation & Metric Evaluation |
+| **Nagaraj M Gudda** | `20241CSE0149` | Risk Segmentation & Recommendation Engine |
+| **Nagaraj N Naik** | `20251LCS3009` | Literature Review & Documentation |
 
 ---
 
 ## 🎯 Problem Statement
 
-Customer churn is one of the most critical challenges for subscription-based businesses. Losing a customer costs **5–25× more** than retaining one. This project builds a machine learning pipeline that:
+Customer churn is one of the most critical challenges for subscription-based businesses. Acquiring a new customer costs **5–25× more** than retaining an existing one. Most machine learning churn projects stop at classification accuracy; **Customer Retention Intelligence** bridges the gap between raw probability and business decision-making:
 
-- **Predicts** the probability of a customer churning
-- **Classifies** customers into **High / Medium / Low** risk tiers
-- **Recommends** targeted, personalized retention offers
-- **Visualizes** insights through an interactive dashboard
+- **Predicts** customer churn probability using cross-validated classifiers
+- **Segments** customers into **High / Medium / Low** risk tiers
+- **Recommends** targeted, personalized retention offers based on risk and customer attributes
+- **Visualizes** real-time inferences through an interactive Streamlit dashboard
 
 ---
 
 ## 🏗️ System Architecture
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                    DATA INGESTION LAYER                         │
-│              Customer_Retention_100_Records.csv                 │
-└──────────────────────────┬──────────────────────────────────────┘
-                           │
-                           ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                  PREPROCESSING PIPELINE                         │
-│  ┌──────────────┐  ┌───────────────┐  ┌──────────────────────┐ │
-│  │ Missing Value │  │  Standard     │  │  One-Hot Encoding    │ │
-│  │ Imputation    │  │  Scaling      │  │  (Categoricals)      │ │
-│  └──────────────┘  └───────────────┘  └──────────────────────┘ │
-└──────────────────────────┬──────────────────────────────────────┘
-                           │
-                           ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                    MODEL TRAINING LAYER                         │
-│  ┌──────────────────┐ ┌──────────────┐ ┌─────────────────────┐ │
-│  │ Logistic         │ │ Decision     │ │ Random Forest       │ │
-│  │ Regression       │ │ Tree         │ │ Classifier          │ │
-│  └──────────────────┘ └──────────────┘ └─────────────────────┘ │
-│          5-Fold Stratified Cross-Validation                     │
-└──────────────────────────┬──────────────────────────────────────┘
-                           │
-                           ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                   INTELLIGENCE ENGINE                           │
-│  ┌──────────────┐  ┌───────────────┐  ┌──────────────────────┐ │
-│  │ Churn         │  │  Risk Level   │  │  Retention Offer     │ │
-│  │ Probability   │  │  Assignment   │  │  Recommendation      │ │
-│  └──────────────┘  └───────────────┘  └──────────────────────┘ │
-└──────────────────────────┬──────────────────────────────────────┘
-                           │
-                           ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                    PRESENTATION LAYER                           │
-│    ┌───────────────────┐        ┌────────────────────────────┐ │
-│    │  Jupyter Notebook │        │  Streamlit Dashboard       │ │
-│    │  (Analysis + EDA) │        │  (Interactive Predictions) │ │
-│    └───────────────────┘        └────────────────────────────┘ │
-└─────────────────────────────────────────────────────────────────┘
-```
+<div align="center">
+  <img src="assets/fig1_architecture.png" alt="Customer Retention Intelligence Architecture" width="650"/>
+  <p><em>Fig. 1. End-to-end framework: From raw customer records to retention recommendations and dashboard deployment.</em></p>
+</div>
+
+The architecture consists of five core stages:
+1. **Data Ingestion & Cleaning:** Handling missing data, type casting, and splitting features.
+2. **Preprocessing Pipeline:** Median imputation and z-score scaling for numerical attributes; most-frequent imputation and one-hot encoding for categorical variables (29 total inputs).
+3. **Stratified 5-Fold Cross-Validation:** Out-of-fold predictions prevent data leakage across Logistic Regression, Decision Tree, and Random Forest.
+4. **Risk Segmentation & Decision Engine:** Threshold-driven risk allocation coupled with multi-attribute business logic rules.
+5. **Interactive UI Layer:** Streamlit interface for ad-hoc customer evaluations and batch report exports.
 
 ---
 
-## 📁 Project Structure
+## 🔬 Experimental Results & Model Performance
+
+Evaluated on 100 customer records (27% churn rate) using **Stratified 5-Fold Cross-Validation**:
+
+### Model Comparison Table
+
+| Model | Accuracy | Precision | Recall | F1-Score | ROC-AUC |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| **Logistic Regression** | 74.0% | 51.4% | 66.7% | 58.1% | 0.792 |
+| **Decision Tree (depth 4)** | 70.0% | 46.3% | 70.4% | 55.9% | 0.672 |
+| **Random Forest (200 trees)** | **75.0%** | **52.6%** | **74.1%** | **61.5%** | **0.795** |
+
+<div align="center">
+  <img src="assets/fig3_model_comparison.png" alt="Model Comparison" width="600"/>
+  <p><em>Fig. 2. Performance benchmark across 5 evaluation metrics.</em></p>
+</div>
+
+### Confusion Matrices & ROC Curves
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center"><b>Confusion Matrices (Out-of-Fold)</b></td>
+      <td align="center"><b>ROC Curves Comparison</b></td>
+    </tr>
+    <tr>
+      <td><img src="assets/fig4_confusion_matrices.png" width="450"/></td>
+      <td><img src="assets/fig5_roc_curves.png" width="400"/></td>
+    </tr>
+  </table>
+</div>
+
+---
+
+## 🎯 Risk Segmentation & Retention Recommendations
+
+### Risk Calibration
+
+Out-of-fold probabilities from Logistic Regression produce strong monotonic ordering:
+
+| Risk Level | Probability Threshold | Customers | Actual Churned | Observed Churn Rate |
+| :--- | :---: | :---: | :---: | :---: |
+| 🟢 **Low** | $p < 0.30$ | 49 | 3 | **6.1%** |
+| 🟡 **Medium** | $0.30 \le p < 0.60$ | 20 | 6 | **30.0%** |
+| 🔴 **High** | $p \ge 0.60$ | 31 | 18 | **58.1%** |
+
+> 💡 **Key Takeaway:** Contacting only the **High-risk segment** (31% of users) reaches **66.7% (18/27) of all churners**, cutting outreach costs by more than two-thirds.
+
+### Recommendation Decision Matrix
+
+| Trigger / Condition | Recommended Action |
+| :--- | :--- |
+| **Risk = High** | 15% bill discount for 3 months; personal retention call within 24 hours |
+| **Risk = Medium** | 10% bill discount for 2 months; proactive plan review |
+| **Risk = Low** | 5% loyalty discount; loyalty appreciation message |
+| **Contract = Month-to-month** | Special incentive for switching to a 1-year contract |
+| **TechSupport = No** | 1 month of free technical support trial |
+| **OnlineSecurity = No** | 1 month of free online security add-on |
+| **MonthlyCharges $\ge$ Median** | Review package for lower-cost alternative |
+
+---
+
+## 🔍 Influential Churn Drivers
+
+<div align="center">
+  <img src="assets/fig6_influential_factors.png" alt="Feature Importance" width="620"/>
+  <p><em>Fig. 3. Influential factors: (a) Logistic Regression coefficients, (b) Random Forest Gini importances.</em></p>
+</div>
+
+- **Tenure:** Higher tenure strongly reduces churn probability.
+- **Contract Type:** Month-to-month contracts exhibit high churn rates; 1-year contracts provide stabilization.
+- **Monthly Charges & Fiber Optic:** Higher bills and fiber optic subscribers showed significantly higher churn rates.
+- **Technical Support:** Customers lacking support add-ons churned at 3× the rate of supported users.
+
+---
+
+## 📁 Repository Structure
 
 ```
 Customer-Retention-Intelligence/
 │
-├── 📓 Customer_Retention_Intelligence.ipynb   # Complete ML workflow & analysis
-├── 🚀 app.py                                  # Streamlit interactive dashboard
-├── 📄 Customer_Retention_100_Records.csv       # Input dataset (100 records)
-├── 📊 Customer_Retention_Final_Results.csv     # Pre-generated model results
+├── 📂 paper/                                  # Research paper assets
+│   ├── README.md                              # Full formatted paper with math & tables
+│   ├── ML_Research_Paper_5CSE03.docx          # Original submission Word document
+│   └── 📂 figures/                            # High-resolution paper figures (1-6)
+│
+├── 📂 assets/                                 # Visuals for repository documentation
+│   ├── fig1_architecture.png
+│   ├── fig2_eda.png
+│   ├── fig3_model_comparison.png
+│   ├── fig4_confusion_matrices.png
+│   ├── fig5_roc_curves.png
+│   └── fig6_influential_factors.png
+│
+├── 📓 Customer_Retention_Intelligence.ipynb   # Complete ML pipeline, EDA & diagnostics
+├── 🚀 app.py                                  # Modular Streamlit dashboard
+├── 📄 Customer_Retention_100_Records.csv       # 100-record input dataset
+├── 📊 Customer_Retention_Final_Results.csv     # Model predictions & risk output
 ├── 📋 requirements.txt                         # Python dependencies
-├── 📝 README.md                                # Project documentation
-└── 🔒 .gitignore                               # Git ignore rules
+├── 📝 README.md                                # Project overview & benchmarks
+├── 🔒 .gitignore                               # Git exclusions
+└── ⚖️ LICENSE                                  # MIT License
 ```
 
 ---
 
-## 🔬 Features & Methodology
+## ⚙️ Installation & Usage
 
-### Machine Learning Pipeline
-
-| Component | Details |
-|-----------|---------|
-| **Algorithms** | Logistic Regression, Decision Tree, Random Forest |
-| **Validation** | 5-Fold Stratified Cross-Validation |
-| **Metrics** | Accuracy, Precision, Recall, F1-Score, ROC-AUC |
-| **Preprocessing** | Median imputation, Standard scaling, One-hot encoding |
-| **Diagnostics** | Confusion matrices, ROC curves, Feature importances |
-
-### Risk Classification Engine
-
-| Risk Tier | Churn Probability | Action Priority |
-|-----------|-------------------|-----------------|
-| 🔴 **High** | ≥ 60% | Immediate intervention |
-| 🟡 **Medium** | 30% – 59% | Proactive engagement |
-| 🟢 **Low** | < 30% | Loyalty reinforcement |
-
-### Intelligent Retention Recommendations
-
-The system generates **context-aware offers** based on:
-
-- Customer risk tier (discount intensity scales with risk)
-- Contract type (month-to-month customers get contract migration offers)
-- Service gaps (missing Tech Support / Online Security → free trials)
-- Spending pattern (high spenders get plan review suggestions)
-
----
-
-## ⚙️ Installation & Setup
-
-### Prerequisites
-
-- Python 3.8 or higher
-- pip (Python package manager)
-
-### Quick Start
+### 1. Clone & Set Up Environment
 
 ```bash
-# 1. Clone the repository
+# Clone the repository
 git clone https://github.com/rahul-v-023/Customer-Retention-Intelligence.git
 cd Customer-Retention-Intelligence
 
-# 2. (Optional) Create a virtual environment
+# (Optional) Create virtual environment
 python -m venv venv
-source venv/bin/activate        # Linux/macOS
-venv\Scripts\activate           # Windows
+venv\Scripts\activate       # Windows
+# source venv/bin/activate  # macOS/Linux
 
-# 3. Install dependencies
+# Install dependencies
 pip install -r requirements.txt
 ```
 
----
-
-## 🚀 Usage
-
-### Run the Jupyter Notebook
-
-For the full analysis pipeline — EDA, model training, evaluation, and diagnostics:
-
-```bash
-jupyter notebook Customer_Retention_Intelligence.ipynb
-```
-
-Run all cells top-to-bottom to reproduce the complete workflow.
-
-### Launch the Streamlit Dashboard
-
-For the interactive prediction interface:
+### 2. Launch the Streamlit Dashboard
 
 ```bash
 streamlit run app.py
 ```
 
-Then open the local URL printed in the terminal (typically `http://localhost:8501`).
+Features included:
+- **Batch Analysis:** Browse full cohort churn probabilities and recommended actions.
+- **Single Customer Prediction:** Enter contract, service, and charge details in real time.
+- **CSV Downloads:** Export individual predictions or the entire batch report with one click.
 
-**Dashboard capabilities:**
-- 📋 View the complete customer retention report with predictions
-- 🔍 Enter individual customer profiles for real-time churn prediction
-- 📈 See churn probability, risk level, and recommended actions
-- 📥 Download reports as CSV files
+### 3. Run the Jupyter Notebook
 
----
+```bash
+jupyter notebook Customer_Retention_Intelligence.ipynb
+```
 
-## 📊 Dataset Description
-
-| Feature | Type | Description |
-|---------|------|-------------|
-| `Customer_ID` | ID | Unique customer identifier |
-| `SeniorCitizen` | Binary | Whether the customer is a senior citizen (0/1) |
-| `Partner` | Categorical | Whether the customer has a partner |
-| `Dependents` | Categorical | Whether the customer has dependents |
-| `tenure` | Numeric | Number of months with the company |
-| `InternetService` | Categorical | Internet service type (DSL / Fiber optic / No) |
-| `OnlineSecurity` | Categorical | Online security add-on subscription |
-| `OnlineBackup` | Categorical | Online backup add-on subscription |
-| `TechSupport` | Categorical | Technical support add-on subscription |
-| `Contract` | Categorical | Contract type (Month-to-month / One year / Two year) |
-| `PaperlessBilling` | Categorical | Whether the customer uses paperless billing |
-| `PaymentMethod` | Categorical | Payment method used |
-| `MonthlyCharges` | Numeric | Monthly charge amount (\$) |
-| `TotalCharges` | Numeric | Total charges to date (\$) |
-| `Churn` | Target | Whether the customer churned (Yes/No) |
+Execute all cells sequentially to reproduce the 5-fold cross-validation, metrics, confusion matrices, and ROC plots.
 
 ---
 
-## 🛠️ Tech Stack
+## 📄 Citation
 
-<div align="center">
+If you use this project or research paper in your work, please cite it as:
 
-| Technology | Purpose |
-|:----------:|:-------:|
-| ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) | Core Language |
-| ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white) | Data Manipulation |
-| ![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white) | Numerical Computing |
-| ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white) | Machine Learning |
-| ![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=python&logoColor=white) | Data Visualization |
-| ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white) | Interactive Dashboard |
-| ![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white) | Notebook Environment |
-
-</div>
-
----
-
-## ⚠️ Limitations & Disclaimer
-
-> **Note:** This is an educational prototype built as a BTech CSE mini-project.
-
-- The included dataset contains only **100 records** — evaluation metrics are illustrative
-- Model performance should be validated on a larger, representative dataset before any production use
-- Feature coefficients and importances indicate **model associations**, not causal relationships
-- Retention offers are **suggestions only** and are not automatically applied
+```bibtex
+@article{rahul2026customer,
+  title={Customer Retention Intelligence: Machine-Learning-Based Churn Prediction, Risk Segmentation and Retention Recommendation},
+  author={Rahul, V. and GujaGonda, Vivek and Biradar, Sudeep S. and Gudda, Nagaraj M. and Naik, Nagaraj N.},
+  journal={Department of Computer Science and Engineering Technical Report},
+  year={2026}
+}
+```
 
 ---
 
@@ -236,30 +224,8 @@ Then open the local URL printed in the terminal (typically `http://localhost:850
 
 This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
 
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Feel free to:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/your-feature`)
-3. Commit your changes (`git commit -m 'Add your feature'`)
-4. Push to the branch (`git push origin feature/your-feature`)
-5. Open a Pull Request
-
----
-
-## 👤 Author
-
-**Rahul V**
-
-[![GitHub](https://img.shields.io/badge/GitHub-rahul--v--023-181717?logo=github)](https://github.com/rahul-v-023)
-
----
-
 <div align="center">
 
-⭐ **If you found this project useful, consider giving it a star!** ⭐
+⭐ **If you find this work helpful, please give the repo a star!** ⭐
 
 </div>
